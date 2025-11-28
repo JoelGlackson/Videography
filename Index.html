@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Graphy</title>
+    <link type="image/png" rel="icon" href="./favicon-32x32.png">
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url(./Background2.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        position: fixed;
+        color: white;
+        width: 100%;
+        box-sizing: border-box;
+        left: 0;
+        right: 0%;
+        background-color: #8a4ac0;
+        z-index: 1000;
+    }
+
+    header>.buttons>p>a {
+        color: white;
+        text-decoration: none;
+        transition: 1s ease;
+    }
+
+    header>.buttons>p>a:hover {
+        color: black;
+        border: 1px solid white;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .buttons {
+        display: inline-flex;
+        gap: 40px;
+    }
+
+    .links {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .s1 {
+        padding-top: 180px;
+        color: white;
+        font-size: 24px;
+    }
+
+    .text1 {
+        width: 100%;
+        padding-left: 190px;
+        font-size: 16px;
+    }
+
+    .text2 {
+        width: 100%;
+        padding-left: 50px;
+        font-size: larger;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 10px;
+    }
+
+    .text3 {
+        width: 100%;
+        padding-top: 100px;
+        padding-left: 200px;
+    }
+
+    .s1>p>a {
+        color: white;
+        text-decoration: none;
+        transition: 1s ease;
+    }
+
+    .s1>p>a:hover {
+        color: black;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        text-decoration-color: white;
+        text-decoration-style: wavy;
+    }
+
+    .s2 {
+        padding-top: 130px;
+    }
+
+    .text4 {
+        padding-left: 280px;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+
+    .text5 {
+        color: white;
+        padding-top: 40px;
+        padding-left: 90px;
+        padding-bottom: 30px;
+        width: 600px;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: justify;
+    }
+
+    .s3 {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .text6 {
+        padding-left: 400px;
+        align-items: center;
+        padding-top: 150px;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 30px;
+        letter-spacing: 5px;
+        width: 100%;
+    }
+
+    .text7,
+    .text8,
+    .text9,
+    .text10,
+    .text11 {
+        font-size: 30px;
+        color: white;
+        padding-left: 90px;
+        text-align: justify;
+        width: 500px;
+        cursor: pointer;
+    }
+
+    .text7::after,
+    .text8::after,
+    .text9::after,
+    .text10::after,
+    .text11::after {
+        content: "";
+    }
+
+    .text7:hover::after {
+        content: "If we hire a videographer of our team you will get a video professional to make a custom video for your business and, once the project is over....";
+        color: white;
+        font-family: cursive;
+        padding-left: 90px;
+        font-size: 24px;
+    }
+
+    .text8:hover::after {
+        content: "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches";
+        font-family: cursive;
+        padding-left: 90px;
+        font-size: 24px;
+    }
+
+    .text9:hover::after {
+        content: "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches";
+        font-family: cursive;
+        color: white;
+        font-family: cursive;
+        padding-left: 90px;
+        font-size: 24px;
+    }
+
+    .text10:hover::after {
+        content: "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches";
+        font-family: cursive;
+        color: white;
+        font-family: cursive;
+        padding-left: 90px;
+        font-size: 24px;
+    }
+
+    .text11:hover::after {
+        content: "Whether you're halfway through the editing process, or you haven't even started, our post production services can put the finishing touches";
+        font-family: cursive;
+        font-family: cursive;
+        padding-left: 90px;
+        font-size: 24px;
+    }
+
+    .text11 {
+        padding-bottom: 200px;
+    }
+
+    .text12 {
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 30px;
+        letter-spacing: 5px;
+        margin-bottom: 20px;
+        text-align: center;
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    .s4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+        background-color: rgba(138, 74, 192, 0.85);
+        min-height: 80vh;
+    }
+
+    form {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(6px);
+        padding: 40px 60px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        color: white;
+        font-size: 18px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        width: 400px;
+        text-align: left;
+    }
+
+    form label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: none;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        font-size: 16px;
+        outline: none;
+        transition: 0.3s ease;
+    }
+
+    form input[type="text"]:focus,
+    form input[type="email"]:focus,
+    form textarea:focus {
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 10px white;
+    }
+
+    form textarea {
+        resize: none;
+    }
+
+    form input[type="submit"] {
+        background-color: white;
+        color: #8a4ac0;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    form input[type="submit"]:hover {
+        background-color: #8a4ac0;
+        color: white;
+        box-shadow: 0 0 10px white;
+    }
+
+    footer {
+        padding: 20px;
+        background-color: #8a4ac0;
+        color: white;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./favicon_io/favicon-32x32.png" alt="">
+            <p>
+                VIDEOGRAPHY
+            </p>
+        </div>
+        <div class="buttons">
+            <p><a href="#home">HOME</a></p>
+            <p><a href="#about">ABOUT</a></p>
+            <p><a href="#services">SERVICES</a></p>
+            <p><a href="#contact">CONTACT</a></p>
+        </div>
+        <div class="links">
+            <a href="https://www.facebook.com">
+                <img width="24" height="24" src="https://img.icons8.com/forma-thin/24/facebook.png" alt="facebook" />
+            </a>
+            <a href="https://www.instagram.com">
+                <img width="24" height="24" src="https://img.icons8.com/softteal-line/24/instagram-new.png"
+                    alt="instagram-new" />
+            </a>
+            <a href="https://in.linkedin.com">
+                <img width="24" height="24" src="https://img.icons8.com/forma-thin-sharp/24/linkedin.png"
+                    alt="linkedin" />
+            </a>
+            <a href="https://x.com">
+                <img width="16" height="16" src="https://img.icons8.com/tiny-bold/16/twitterx.png" alt="twitterx"
+                    id="x" />
+            </a>
+        </div>
+    </header>
+    <section class="s1" id="home">
+        <p class="text1">FOR WEBSITE AND VIDEO EDITING</p>
+        <p class="text2">VIDEOGRAPHER'S PORTFOLIO</p>
+        <p class="text3">
+            <a href="#about">SEE MORE ABOUT US</a>
+        </p>
+    </section>
+    <section class="s2" id="about">
+        <p class="text4">ABOUT US</p>
+        <p class="text5">"A videography portfolio is a collection of your best work, typically hosted on a personal
+            website, that
+            showcases your skills, style, and experience to potential clients. It often includes a short demo reel and
+            can also feature full-length projects, project details, and an "about me" section to demonstrate
+            professionalism and attract clients."</p>
+    </section>
+    <p class="text6" id="services"> OUR SERVICES </p>
+    <section class="s3">
+        <p class="text8"> Motion Graphics <br></p>
+        <p class="text9"> Video Distributing <br></p>
+        <p class="text10"> Video hosting <br></p>
+        <p class="text11"> Scripting and editing <br></p>
+    </section>
+    <section class="s4" id="contact">
+        <form action="TQ.html" method="get">
+            <p class="text12">CONTACT ME</p>
+            <label for="fnt">First Name *</label>
+            <input type="text" id="fnt" required>
+
+            <label for="snt">Second Name</label>
+            <input type="text" id="snt">
+
+            <label for="mail">Email</label>
+            <input type="email" id="mail">
+
+            <label for="msg">Ask us anything or share your thoughts</label>
+            <textarea id="msg" cols="30" rows="5"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <footer>
+        <center>
+            <p>&#169;2025 VIDEOGRAPHY | All Rights Reserved</p>
+        </center>
+    </footer>
+</body>
+
+</html>
